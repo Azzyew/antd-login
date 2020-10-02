@@ -32,7 +32,7 @@
 }
 
 .header-content a:hover {
-  font-size: 200%;
+  font-size: 180%;
   transition: all 0.4s ease-out;
 }
 
@@ -86,4 +86,16 @@
 
 .movie-grid {
   font-size: var(--font-movie);
+}
+
+.movie-title:hover {
+  font-size: 115%;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+
+.movie-grid img:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
 }
