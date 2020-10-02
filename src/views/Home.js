@@ -7,7 +7,7 @@ import { VideoCameraFilled, GithubOutlined } from "@ant-design/icons";
 
 const Home = () => {
   
-  const style = { background: "var(--primary-color)", padding: "8px 0" };
+  const style = { background: "var(--primary-color)", padding: "8px 0"};
   const welcomeStyle = { background: "var(--primary-color)", color: "#fff", margin: "3vh" };
   const gridStyle = { height: "45vh", width: "30vw;" };
 
