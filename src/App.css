@@ -5,20 +5,22 @@
 }
 
 .header {
-  background-color: #288;
-  min-height: 100vh;
+  background-color: var(--terciary-color);
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .login {
   background-color: var(--primary-color);
-  padding: 30vh;
-  
+  height: 100vh;
+}
+
+.login-row {
+  margin-top: 30vh;
 }
 
 .login-title {
@@ -29,7 +31,7 @@
 
 .icon {
   font-size: var(--font-title);
-  margin-top: -1.8%;
+  margin-top: -1.5%;
   color: var(--secondary-color);
 }
 
@@ -37,6 +39,34 @@
   color: #fff;
 }
 
-.login-divider {
-  color: var(--terciary-color);
+.login-btn {
+  margin-top: 3%;
+  font-size: var(--font-text);
+  background-color: var(--secondary-color);
+  text-align: center;
+  height: 8vh;
+  border: transparent;
+}
+
+.login-btn:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+  border: var(--secondary-color);
+  font-weight: bold;
+  transition: all 0.4s ease-out;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-content h3 {
+  color: #fff;
+}
+
+.header-content a {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
 }
