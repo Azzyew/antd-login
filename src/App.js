@@ -1,36 +1,37 @@
 import React from 'react';
-import { Router, Route, Switch } from "react-router-dom";
-import { Container } from "reactstrap";
-import Loading from "./components/loading";
-import navbar from "./components/navbar";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+
+import { Layout } from 'antd';
+
 import Home from "./views/Home";
-import { useAuth0 } from "@auth0/auth0-react";
-import history from "./utils/history";
-import './App.css';
+import Login from "./views/Login";
+
+const { Content } = Layout;
 
 const App = () => {
-  const { isLoading, error } = useAuth0();
+    
+  const { isAuthenticated} = useAuth0();
+    
+    return(
 
-  if (error) {
-    return <div>Oops... {error.message}</div>;
+      <Layout className="layout">
+        
+        <Content className='main'>
+          <Router>
+            <Switch>
+              <Route exact path='/'>
+                <Login />
+              </Route>
+              <Route exact path='/home'>
+                  {isAuthenticated && <Home/>}
+                </Route>
+            </Switch>
+          </Router>
+
+        </Content>
+      </Layout>
+    )
   }
-
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  return (
-  <Router history={history}>
-    <div id="app" className="d-flex flex-column h-100">
-      <navbar />
-      <Container className="flex-grow-1 mt-5">
-        <Switch>
-          <Route path="/" exact component={Home} />
-        </Switch>
-      </Container>
-    </div>
-  </Router>
-);
-};
 
 export default App;

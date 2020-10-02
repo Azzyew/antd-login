@@ -1,13 +1,15 @@
+import React from "react";
 
-import React, { Fragment } from "react";
+import header from "../components/Home/header";
 
-import Content from "../components/Content";
-
-const Home = () => (
-  <Fragment>
-    <hr />
-    <Content />
-  </Fragment>
-);
+class Home {
+  render(){
+    return(
+      <div className="home">
+        {header}
+      </div>
+    )
+  }
+}
 
 export default Home;
