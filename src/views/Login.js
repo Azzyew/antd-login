@@ -1,22 +1,31 @@
 import React from 'react';
-import {Row, Divider } from 'antd';
-import LoginBtn from "./../components/login/LoginBtn";
+import {Row, Divider, Layout } from 'antd';
+import { VideoCameraFilled} from "@ant-design/icons";
+//import LoginBtn from "./../components/login/LoginBtn";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
 
+const { loginWithRedirect } = useAuth0();
 	return (
-		<Row justify='center' align='middle'>
+		<Layout className="login">
+			<Row justify="center" align="middle" className="login-row">
 
-				<h1 className='login-title'>WatchIt</h1>
+				<h1 className="login-title">WatchIt</h1>
+				<VideoCameraFilled className="icon"/>
+			</Row>
+			
+			<Divider />
 
-				<h2>Entre para descobrir novos filmes incríveis!</h2>
+			<Row justify="center" align="middle" className="login-end">
+				<h2>Entre para descobrir novos filmes incríveis!</h2>	
+			</Row>
 
-				<Divider />
+			<Row justify="center">
+			<button onClick={() => loginWithRedirect()}>Log In</button>
+			</Row>
 
-				<Row justify='center'>
-					{LoginBtn}
-				</Row>
-		</Row>
+		</Layout>
 	);
 };
 

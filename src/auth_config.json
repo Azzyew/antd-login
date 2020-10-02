@@ -1,5 +1,5 @@
 {
-    "domain": "dev-6t8vqapz.us.auth0.com",
-    "clientId": "37tauAi3AyGlkauREFyFQhHJIerTcvPx",
-    "redirectUri": "http://localhost:3000/home"
+    "Domain": "dev-6t8vqapz.us.auth0.com",
+    "ClientId": "37tauAi3AyGlkauREFyFQhHJIerTcvPx",
+    "RedirectUri": "http://localhost:3000/home"
 }

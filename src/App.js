@@ -6,6 +6,7 @@ import { Layout } from 'antd';
 
 import Home from "./views/Home";
 import Login from "./views/Login";
+import "./App.css";
 
 const { Content } = Layout;
 

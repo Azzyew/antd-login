@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #141414;
+  --secondary-color: #203175;
+  --terciary-color: #161d40;
+
+  --font-title: 2rem;
+  --font-text: 1.4rem;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Karla', sans-serif;
 }

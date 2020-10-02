@@ -4,8 +4,8 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
+.header {
+  background-color: #288;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,4 +13,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.login {
+  background-color: var(--primary-color);
+  padding: 30vh;
+  
+}
+
+.login-title {
+  font-size: var(--font-title);
+  color: #fff;
+  padding-right: 2%;
+}
+
+.icon {
+  font-size: var(--font-title);
+  margin-top: -1.8%;
+  color: var(--secondary-color);
+}
+
+.login h2 {
+  color: #fff;
+}
+
+.login-divider {
+  color: var(--terciary-color);
 }
